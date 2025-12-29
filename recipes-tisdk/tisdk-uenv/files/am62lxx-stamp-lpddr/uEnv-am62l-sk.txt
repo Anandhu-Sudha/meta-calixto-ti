@@ -1,0 +1,3 @@
+# Custom uEnv for am62lxx-stamp
+optargs=vt.global_cursor_default=0
+
