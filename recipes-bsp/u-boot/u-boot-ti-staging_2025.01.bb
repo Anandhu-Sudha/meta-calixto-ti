@@ -6,7 +6,7 @@ PR = "r1"
 
 BRANCH = "ti-u-boot-2025.01"
 
-#SRCREV_uboot = "295e8b016389d2d9be39b72aa5e014f93fe779fd"
-SRCREV_uboot = "${AUTOREV}"
+SRCREV_uboot = "cbec03719769ac1bfd27e6d4c6bda95cca02cd4e"
+#SRCREV_uboot = "${AUTOREV}"
 
 

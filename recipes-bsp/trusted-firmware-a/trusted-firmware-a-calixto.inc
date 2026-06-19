@@ -8,8 +8,8 @@ PV = "2.13+git"
 #SRCBRANCH = "master"
 
 #LIC_FILES_CHKSUM:am62lxx = "file://docs/license.rst;md5=1118e32884721c0be33267bd7ae11130"
-#SRCREV_tfa:am62lxx = "c94644668bcbe1d7476f3e5efd74eda211d86b92" //manual commit id mentioning
-SRCREV_tfa:am62lxx = "${AUTOREV}"
+SRCREV_tfa:am62lxx = "104220ad8b725f5c03f44375fd23f1ae41feadcc" 
+#SRCREV_tfa:am62lxx = "${AUTOREV}"
 PR:pn-trusted-firmware-a = "r1"
 SRC_URI_TRUSTED_FIRMWARE_A:am62lxx = "git://github.com/Anandhu-Sudha/arm-trusted-firmware.git;protocol=https"
 SRCBRANCH:am62lxx = "ti-master"
