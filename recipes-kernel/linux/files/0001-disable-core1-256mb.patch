@@ -1,0 +1,23 @@
+diff --git a/arch/arm64/boot/dts/ti/k3-am62l-calixto-stamp_256MB.dts b/arch/arm64/boot/dts/ti/k3-am62l-calixto-stamp_256MB.dts
+--- a/arch/arm64/boot/dts/ti/k3-am62l-calixto-stamp_256MB.dts
++++ b/arch/arm64/boot/dts/ti/k3-am62l-calixto-stamp_256MB.dts
+@@ -21,6 +21,19 @@
+ 		mmc0 = &sdhci0;
+ 		mmc1 = &sdhci1;
+ 	};
++	
++	cpus {
++		/delete-node/ cpu@1;
++		/delete-node/ cpu-map;
++
++		cpu-map {
++			cluster0: cluster0 {
++				core0 {
++					cpu = <&cpu0>;
++				};
++			};
++		};
++	};
+ 
+ 	chosen {
+ 		stdout-path = &main_uart0;

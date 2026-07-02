@@ -14,3 +14,10 @@ SRCREV = "9be1fccba3efe18bce60fcc1c621b4fb2f27ebf5"
 
 # Defconfig control file fetch
 KERNEL_DEFCONFIG = "file://defconfig"
+
+
+# machine+core specific patch
+SRC_URI:append:am62l-stamp-1gb = "${@bb.utils.contains('CORE', '1', ' file://0001-disable-core1-1gb.patch', '', d)}"
+SRC_URI:append:am62l-stamp-2gb = "${@bb.utils.contains('CORE', '1', ' file://0001-disable-core1-2gb.patch', '', d)}"
+SRC_URI:append:am62l-stamp-512mb = "${@bb.utils.contains('CORE', '1', ' file://0001-disable-core1-512mb.patch', '', d)}"
+SRC_URI:append:am62l-stamp-256mb = "${@bb.utils.contains('CORE', '1', ' file://0001-disable-core1-256mb.patch', '', d)}"
