@@ -12,9 +12,11 @@ KERNEL_GIT_BRANCH = "branch=${BRANCH}"
 #AM62L SRCREV . 
 SRCREV = "9be1fccba3efe18bce60fcc1c621b4fb2f27ebf5"
 
-# Defconfig control file fetch
-KERNEL_DEFCONFIG = "file://defconfig"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}-6.12:"
 
+SRC_URI:remove = "file://defconfig"
+
+SRC_URI:append = " file://defconfig;subdir=."
 
 # machine+core specific patch
 SRC_URI:append:am62l-stamp-1gb = "${@bb.utils.contains('CORE', '1', ' file://0001-disable-core1-1gb.patch', '', d)}"

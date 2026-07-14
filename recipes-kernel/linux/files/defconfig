@@ -1,1 +1,4 @@
 use-kernel-config=am62l_calixto_default_defconfig
+SRC_URI:append = " \
+    file://am62l_calixto_default_defconfig;subdir=arch/arm64/configs \
+"
