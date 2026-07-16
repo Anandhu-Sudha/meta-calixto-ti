@@ -5,6 +5,19 @@ set -eu -o pipefail # fail on error and report it, debug all lines
 sudo -n true
 test $? -eq 0 || exit 1 "you should have sudo privilege to run this script"
 
+LOCAL_CONF="../../build/conf/local.conf"  
+
+if [ ! -f "$LOCAL_CONF" ]; then
+    echo "Error: $LOCAL_CONF not found"
+    exit 1
+fi
+
+sed -i '/^#MACHINE ?= "arago"/c\
+MACHINE ?= "am62l-stamp-1gb"\
+CORE = "2"' "$LOCAL_CONF"
+
+grep -A1 "^MACHINE" "$LOCAL_CONF"
+
 echo installing the must-have pre-requisites
 while read -r p ; do sudo apt-get install -y $p ; done < <(cat << "EOF"
     gawk
