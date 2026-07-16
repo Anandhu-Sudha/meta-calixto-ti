@@ -9,3 +9,4 @@ export IMAGE_BASENAME = "calixto-default-image"
 
 # Optional: Add specific packages only for your custom image
 IMAGE_INSTALL:append = " htop bash"
+IMAGE_INSTALL:append = " kernel-modules"

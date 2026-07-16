@@ -10,9 +10,10 @@ BRANCH = "ti-linux-6.12.y"
 KERNEL_GIT_BRANCH = "branch=${BRANCH}"
 
 #AM62L SRCREV . 
-SRCREV = "9be1fccba3efe18bce60fcc1c621b4fb2f27ebf5"
+SRCREV = "120d78468b7e2560faec51612e999aa99d70134d"
 
-FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}-6.12:"
+#FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}-6.12:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/linux-ti-staging-6.12:"
 
 SRC_URI:remove = "file://defconfig"
 
